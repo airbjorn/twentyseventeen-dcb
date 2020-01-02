@@ -6,8 +6,8 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style') );
 }
 // Enqueue child them js file
-//add_action( 'wp_enqueue_scripts', 'child_theme_js' );
-//function child_theme_js() {
-//  wp_enqueue_script( 'child-theme-js' , get_stylesheet_directory_uri() . '/child-theme-js.js' , array( 'twentyseventeen-global' ) , false , true );
-//}
+add_action( 'wp_enqueue_scripts', 'child_theme_js' );
+function child_theme_js() {
+  wp_enqueue_script( 'child-theme-js' , get_stylesheet_directory_uri() . '/child-theme-js.js' , array( 'twentyseventeen-global' ) , false , true );
+}
 ?>

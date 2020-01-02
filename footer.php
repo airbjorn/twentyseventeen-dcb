@@ -39,7 +39,8 @@
 					<?php
 				endif;
 
-				get_template_part( 'template-parts/footer/site', 'info' );
+				//get_template_part( 'template-parts/footer/site', 'info' );
+				<p style="margin: 10px 0; text-align: right;">Drachenflieger-Club Berlin e.V. Powered by <a href="https://wordpress.org">WordPress</a></p>
 				?>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->

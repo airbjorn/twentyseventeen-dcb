@@ -4,7 +4,7 @@
  *
  * Description: A custom template for displaying a fullwidth layout with no sidebar.
  *
- * @package Twenty Seventeen Child
+ * @package Twenty Seventeen Child for dcb.org
  */
 get_header(); ?>
 

@@ -23,3 +23,13 @@ body.page-template-template-full-width #content #primary .entry-content {
 body.page-template-template-full-width #content #primary .entry-header {
     margin-bottom: 4em;
 }
+
+/*
+ Site Branding Container
+ See https://wordpress.org/support/topic/how-to-modify-site-branding-container
+ Within the main title, set a transparency of 30%.
+*/
+.site-branding {
+	background-color:rgba(0,0,0,0.3);
+}
+

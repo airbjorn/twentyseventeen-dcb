@@ -39,9 +39,10 @@
 					<?php
 				endif;
 
-				//get_template_part( 'template-parts/footer/site', 'info' );
-				<p style="margin: 10px 0; text-align: right;">Drachenflieger-Club Berlin e.V. Powered by <a href="https://wordpress.org">WordPress</a></p>
-				?>
+				// changed for dcb.org
+				//get_template_part( 'template-parts/footer/site', 'info' );?>
+				<p style="margin: 10px 0; text-align: right;">Drachenflieger-Club Berlin e.V., powered by <a href="https://wordpress.org">WordPress</a></p>
+
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->

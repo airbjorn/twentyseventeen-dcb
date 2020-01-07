@@ -48,7 +48,7 @@ Improve main title readability
 Move Sidebar to the right.
 NOTE: Changes correspond to "Content for pages"
 
-Reasons:
+Change Details:
   - move sidebar to the right (default: left)
   - reduce width of sidebar to obtain a margin between
     content and sidebar (default: 36%)
@@ -67,7 +67,7 @@ Reasons:
 Move Sidebar to the right.
 NOTE: directly corresponds to "Sidebar for pages"
 
-Reasons:
+Change Details:
   - move content to the left (default: right)
   - widen actual content to 64% (default: 58%)
 */

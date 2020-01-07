@@ -33,7 +33,15 @@ body.page-template-template-full-width #content #primary .entry-header {
 	background-color:rgba(0,0,0,0.3);
 }
 
-/* Sidebar on pages should appear on the right hand side (default: left) */
+/*
+=== Sidebar for pages ===
+Note: Changes correspond to "Content for pages"
+
+Reasons:
+  - appear on the right hand side (default: left)
+  - reduce width of sidebar to obtain a margin between
+    content and sidebar (default: 36%)
+*/
 @media screen and (min-width: 48em) {
         body:not(.has-sidebar):not(.page-one-column) .page-header,
         body.has-sidebar.error404 #primary .page-header,
@@ -43,7 +51,14 @@ body.page-template-template-full-width #content #primary .entry-header {
 		width: 33%;
 }
 
-/* wide actual content to 64% (default: 58) */
+/*
+=== Content for pages ===
+Note: directly corresponds to "Sidebar for pages"
+
+Reasons:
+  - appear on the left hand side (default: right)
+  - wide actual content to 64% (default: 58%)
+*/
 blog:not(.has-sidebar) #primary article,
         .archive:not(.page-one-column):not(.has-sidebar) #primary article,
         .search:not(.has-sidebar) #primary article,

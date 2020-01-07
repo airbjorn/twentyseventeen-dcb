@@ -50,6 +50,7 @@ blog:not(.has-sidebar) #primary article,
         .error404.has-sidebar #primary .page-content,
         body.page-two-column:not(.archive) #primary .entry-content,
         body.page-two-column #comments {
+		float: left;
                 width: 64%;
         }
 }

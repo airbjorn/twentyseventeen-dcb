@@ -40,6 +40,7 @@ body.page-template-template-full-width #content #primary .entry-header {
         body.page-two-column:not(.archive) #primary .entry-header,
         body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
                 float: right;
+		width: 33%;
 }
 
 /* wide actual content to 64% (default: 58) */

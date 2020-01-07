@@ -1,7 +1,7 @@
 /*
  Theme Name:   Twenty Seventeen Child for dcb.org
  Theme URI:    https://github.com/airbjorn/twentyseventeen-dcb/
- Description:  Ein Child Theme für die dcb homepage
+ Description:  A Child Theme for the dcb.org homepage
  Author:       Björn Gerhart
  Author URI:   https://airbjorn.de
  Template:     twentyseventeen
@@ -10,6 +10,14 @@
  Text Domain:  twentyseventeen-dcb
 */
 
+/*
+=== Added "Full Width" Template ===
+Files involved to achieve template functionality:
+- template-full-width.php
+- tempate-parts/page/content-page-full-width.php
+
+See also: https://themecoder.de/2017/04/12/full-width-page-template-fuer-twenty-seventeen-mit-wordpress-child-theme-erstellen/
+*/
 body.page-template-template-full-width #content #primary {
 	max-width: 100%;
 }
@@ -25,7 +33,9 @@ body.page-template-template-full-width #content #primary .entry-header {
 }
 
 /*
- Site Branding Container
+=== Site Branding Container ===
+Improve main title readability
+ 
  See https://wordpress.org/support/topic/how-to-modify-site-branding-container
  Within the main title, set a transparency of 30%.
 */
@@ -35,10 +45,11 @@ body.page-template-template-full-width #content #primary .entry-header {
 
 /*
 === Sidebar for pages ===
-Note: Changes correspond to "Content for pages"
+Move Sidebar to the right.
+NOTE: Changes correspond to "Content for pages"
 
 Reasons:
-  - appear on the right hand side (default: left)
+  - move sidebar to the right (default: left)
   - reduce width of sidebar to obtain a margin between
     content and sidebar (default: 36%)
 */
@@ -53,11 +64,12 @@ Reasons:
 
 /*
 === Content for pages ===
-Note: directly corresponds to "Sidebar for pages"
+Move Sidebar to the right.
+NOTE: directly corresponds to "Sidebar for pages"
 
 Reasons:
-  - appear on the left hand side (default: right)
-  - wide actual content to 64% (default: 58%)
+  - move content to the left (default: right)
+  - widen actual content to 64% (default: 58%)
 */
 blog:not(.has-sidebar) #primary article,
         .archive:not(.page-one-column):not(.has-sidebar) #primary article,

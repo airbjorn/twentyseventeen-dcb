@@ -82,3 +82,10 @@ blog:not(.has-sidebar) #primary article,
                 width: 64%;
         }
 }
+
+/*
+Reduce gap above the content sections for pages other than the start page.
+*/
+#content {
+	padding-top: 30px;
+}

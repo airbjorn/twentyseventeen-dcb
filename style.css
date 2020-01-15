@@ -89,3 +89,32 @@ Reduce gap above the content sections for pages other than the start page.
 #content {
 	padding-top: 30px;
 }
+
+/*
+ * don't UPPERCASE title
+ */
+.site-title,
+.site-title a {
+	opacity: 0.8;
+	text-transform: none;
+}
+
+/* lower opacity of site description (default: 0.8) */
+body.has-header-image .site-description,
+body.has-header-video .site-description {
+	opacity: 0.7;
+}
+
+/*
+ * Increase content section width (default: 700px)
+ */
+/*.wrap {
+	max-width: 1145px;
+}*/
+
+/*
+ * Don't UPPERCASE the meta data
+ */
+.entry-meta {
+	text-transform: none;
+}

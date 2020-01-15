@@ -105,6 +105,11 @@ body.has-header-video .site-description {
 	opacity: 0.7;
 }
 
+/* make logo a bit more opaque which is more elegant */
+.custom-logo-link {
+	opacity: 0.7;
+}
+
 /*
  * Increase content section width (default: 700px)
  */

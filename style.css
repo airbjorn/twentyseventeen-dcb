@@ -11,13 +11,13 @@
 */
 
 /*
-=== Added "Full Width" Template ===
-Files involved to achieve template functionality:
-- template-full-width.php
-- tempate-parts/page/content-page-full-width.php
-
-See also: https://themecoder.de/2017/04/12/full-width-page-template-fuer-twenty-seventeen-mit-wordpress-child-theme-erstellen/
-*/
+ * === Added "Full Width" Template ===
+ * Files involved to achieve template functionality:
+ * - template-full-width.php
+ * - tempate-parts/page/content-page-full-width.php
+ *
+ * See also: https://themecoder.de/2017/04/12/full-width-page-template-fuer-twenty-seventeen-mit-wordpress-child-theme-erstellen/
+ */
 body.page-template-template-full-width #content #primary {
 	max-width: 100%;
 }
@@ -33,26 +33,26 @@ body.page-template-template-full-width #content #primary .entry-header {
 }
 
 /*
-=== Site Branding Container ===
-Improve main title readability
- 
- See https://wordpress.org/support/topic/how-to-modify-site-branding-container
- Within the main title, set a transparency of 30%.
-*/
+ * === Site Branding Container ===
+ * Improve main title readability
+ *
+ *  See https://wordpress.org/support/topic/how-to-modify-site-branding-container
+ *  Within the main title, set a transparency of 30%.
+ */
 .site-branding {
 	background-color:rgba(0,0,0,0.3);
 }
 
 /*
-=== Sidebar for pages ===
-Move Sidebar to the right.
-NOTE: Changes correspond to "Content for pages"
-
-Change Details:
-  - move sidebar to the right (default: left)
-  - reduce width of sidebar to obtain a margin between
-    content and sidebar (default: 36%)
-*/
+ * === Sidebar for pages ===
+ * Move Sidebar to the right.
+ * NOTE: Changes correspond to "Content for pages"
+ *
+ * Change Details:
+ * - move sidebar to the right (default: left)
+ * - reduce width of sidebar to obtain a margin between
+ *   content and sidebar (default: 36%)
+ */
 @media screen and (min-width: 48em) {
         body:not(.has-sidebar):not(.page-one-column) .page-header,
         body.has-sidebar.error404 #primary .page-header,
@@ -63,14 +63,14 @@ Change Details:
 }
 
 /*
-=== Content for pages ===
-Move Sidebar to the right.
-NOTE: directly corresponds to "Sidebar for pages"
-
-Change Details:
-  - move content to the left (default: right)
-  - widen actual content to 64% (default: 58%)
-*/
+ * === Content for pages ===
+ * Move Sidebar to the right.
+ * NOTE: directly corresponds to "Sidebar for pages"
+ *
+ * Change Details:
+ * - move content to the left (default: right)
+ * - widen actual content to 64% (default: 58%)
+ */
 blog:not(.has-sidebar) #primary article,
         .archive:not(.page-one-column):not(.has-sidebar) #primary article,
         .search:not(.has-sidebar) #primary article,
@@ -83,16 +83,12 @@ blog:not(.has-sidebar) #primary article,
         }
 }
 
-/*
-Reduce gap above the content sections for pages other than the start page.
-*/
+/* Reduce gap above the content sections for pages other than the start page. */
 #content {
 	padding-top: 30px;
 }
 
-/*
- * don't UPPERCASE title
- */
+/* don't UPPERCASE title */
 .site-title,
 .site-title a {
 	opacity: 0.8;
@@ -110,16 +106,21 @@ body.has-header-video .site-description {
 	opacity: 0.7;
 }
 
-/*
- * Increase content section width (default: 700px)
- */
+/* Increase content section width (default: 700px) */
 /*.wrap {
 	max-width: 1145px;
 }*/
 
-/*
- * Don't UPPERCASE the meta data
- */
+/* Don't UPPERCASE the meta data */
 .entry-meta {
 	text-transform: none;
+}
+
+/*
+ * Don't show the author, because in many cases the text has been authored
+ * by different persons anyway
+ */
+.single .byline,
+.group-blog .byline {
+	display: none;
 }

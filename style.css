@@ -54,11 +54,11 @@ body.page-template-template-full-width #content #primary .entry-header {
  *   content and sidebar (default: 36%)
  */
 @media screen and (min-width: 48em) {
-        body:not(.has-sidebar):not(.page-one-column) .page-header,
-        body.has-sidebar.error404 #primary .page-header,
-        body.page-two-column:not(.archive) #primary .entry-header,
-        body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
-                float: right;
+	body:not(.has-sidebar):not(.page-one-column) .page-header,
+	body.has-sidebar.error404 #primary .page-header,
+	body.page-two-column:not(.archive) #primary .entry-header,
+	body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
+		float: right;
 		width: 33%;
 }
 
@@ -72,23 +72,27 @@ body.page-template-template-full-width #content #primary .entry-header {
  * - widen actual content to 64% (default: 58%)
  */
 blog:not(.has-sidebar) #primary article,
-        .archive:not(.page-one-column):not(.has-sidebar) #primary article,
-        .search:not(.has-sidebar) #primary article,
-        .error404:not(.has-sidebar) #primary .page-content,
-        .error404.has-sidebar #primary .page-content,
-        body.page-two-column:not(.archive) #primary .entry-content,
-        body.page-two-column #comments {
+	.archive:not(.page-one-column):not(.has-sidebar) #primary article,
+	.search:not(.has-sidebar) #primary article,
+	.error404:not(.has-sidebar) #primary .page-content,
+	.error404.has-sidebar #primary .page-content,
+	body.page-two-column:not(.archive) #primary .entry-content,
+	body.page-two-column #comments {
 		float: left;
-                width: 64%;
-        }
+		width: 64%;
+	}
 }
 
-/* Reduce gap above the content sections for pages other than the start page. */
+/*
+ * Reduce gap above the content sections for pages other than the start page.
+ */
 #content {
 	padding-top: 30px;
 }
 
-/* don't UPPERCASE title */
+/*
+ * don't UPPERCASE title
+ */
 .site-title,
 .site-title a {
 	opacity: 0.8;
@@ -106,15 +110,12 @@ body.has-header-video .site-description {
 	opacity: 0.7;
 }
 
-/* Increase content section width (default: 700px) */
+/*
+ * Increase content section width (default: 700px
+ */
 /*.wrap {
 	max-width: 1145px;
 }*/
-
-/* Don't UPPERCASE the meta data */
-.entry-meta {
-	text-transform: none;
-}
 
 /*
  * Don't show the author, because in many cases the text has been authored
@@ -124,3 +125,79 @@ body.has-header-video .site-description {
 .group-blog .byline {
 	display: none;
 }
+
+/*
+ * Widget TITLE within the sidebar: define font and box color and details
+ *
+ * Text color is "Wordpress Blue" like defined in
+ * https://make.wordpress.org/design/handbook/design-guide/foundations/colors/
+ */
+h2.widget-title {
+	color: #0073aa;
+}
+
+/* draw a box filled with a real light grey color */
+.widget-title {
+	background: #ececec;
+	margin-bottom: 0px !important;
+	padding: 12px !important;
+}
+
+/*
+ * Modify link design within a widget in the sidebar
+ */
+.widget li a, 
+.widget a {
+	box-shadow: none !important;
+	color: navy;
+}
+
+/* draw lightgrey box and text color firebrick on hover */
+.widget li a:hover,
+.widget a:hover {
+	box-shadow: none !important;
+	background: #ececec;
+	color: firebrick !important;
+}
+
+.single-post .entry-title,
+.page .entry-title {
+	color: firebrick !important;
+}
+
+h2.entry-title a:hover {
+	box-shadow: none;
+	background: #ececec;
+}
+
+/*
+ * Modify link color in normal content also
+ */
+.entry-content a {
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: inset 0 -1px 0 currentColor;
+	box-shadow: inset 0 -1px 0 currentColor;
+}
+.entry-content a:hover {
+	background: #ececec;
+	color: firebrick !important;
+	-webkit-box-shadow: inset 0 -1px 0 currentColor;
+	box-shadow: inset 0 -1px 0 currentColor;
+}
+
+/* Color of meta data like post date and author */
+.entry-meta * {
+	color: #0073aa;
+}
+
+/* header 1 color */
+h1 {
+	color: firebrick !important;
+}
+
+/* title color */
+.entry-title, .entry-title a {
+	color: firebrick !important;
+}
+

@@ -201,3 +201,13 @@ h1 {
 	color: firebrick !important;
 }
 
+/*
+ * Reduce height of header-image
+ */
+.twentyseventeen-front-page.has-header-image .custom-header-media, .twentyseventeen-front-page.has-header-video .custom-header-media, .home.blog.has-header-image .custom-header-media, .home.blog.has-header-video .custom-header-media {
+    height: 40vh;
+}
+
+.has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
+    height: 40vh;
+}

@@ -211,3 +211,39 @@ h1 {
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
     height: 40vh;
 }
+
+/*
+ * Define design for the widgets:
+ * - Recent Posts Extended    and
+ * - RSS feeds
+ */
+.widget ul li,
+.widget ol li {
+    border-bottom: none;
+    border-top: 1px solid #ddd;
+    padding: 0.5em 0;
+}
+
+.sidebar-news h3.rpwe-title,
+.widget_rss li .rsswidget {
+    background: none !important;
+    clear: none;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    font-weight: 400;
+    font-size: 16px !important;
+    line-height: 1.5em;
+    color: navy;
+}
+
+.sidebar-news .rpwe-time {
+    color: #767676;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    font-size: 10px;
+}
+
+.widget-title a.rsswidget {
+    color: rgb(0, 115, 170);
+}

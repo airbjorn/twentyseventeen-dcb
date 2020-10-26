@@ -1,4 +1,16 @@
 <?php
+// Fix Privacy Hole: hide internal wp information for anybody.
+// See: c't 23/2020 p 28 in the context of allowed JSON-API calls
+add_filter( 'rest_authentication_errors', function( $result ) { 
+  if ( ! empty( $result ) ) { 
+    return $result; 
+  } 
+  if ( ! is_user_logged_in() ) { 
+    return new WP_Error( '401', 'not allowed.', array('status' => 401) ); 
+  } 
+  return $result;
+});
+
 // Enqueue parent theme styles and child theme stylesheet
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {

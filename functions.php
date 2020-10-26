@@ -22,4 +22,21 @@ add_action( 'wp_enqueue_scripts', 'child_theme_js' );
 function child_theme_js() {
   wp_enqueue_script( 'child-theme-js' , get_stylesheet_directory_uri() . '/child-theme-js.js' , array( 'twentyseventeen-global' ) , false , true );
 }
+
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+  wp_redirect( home_url() );
+  exit();
+}
+
+function register_dcb_menu() {
+  register_nav_menu('member-menu',__( 'Member Menu' ));
+}
+add_action('init','register_dcb_menu');
+
+function print_menu_shortcode($atts, $content = null) {
+    extract(shortcode_atts(array( 'name' => null, 'menu_class' => null, 'container_class' => null, 'menu_id' => null, 'container_id' => null, ), $atts));
+    return wp_nav_menu( array( 'menu' => $name, 'menu_class' => $menu_class, 'container_class' => $container_class, 'menu_id' => $menu_id, 'container_id' => $container_id, 'echo' => false ) );
+}
+add_shortcode('menu', 'print_menu_shortcode');
 ?>

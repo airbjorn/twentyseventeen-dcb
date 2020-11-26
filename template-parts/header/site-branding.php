@@ -15,19 +15,24 @@
 		<?php the_custom_logo(); ?>
 
 		<div class="site-branding-text">
-			<?php if ( is_front_page() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif; ?>
+			<!-- each _ means a line break -->
+			<?php $title_lines=explode("_", get_bloginfo( 'name' ));
+			foreach ($title_lines as $title_single_line) {
+				if ( is_front_page() ): ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $title_single_line; ?><br></a></h1>
+				<?php else : ?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $title_single_line; ?><br></a></p>
+				<?php endif;
+			} ?>
 
 			<?php
 			$description = get_bloginfo( 'description', 'display' );
 
 			if ( $description || is_customize_preview() ) :
-				?>
+			?>
 				<p class="site-description"><?php echo $description; ?></p>
 			<?php endif; ?>
+
 		</div><!-- .site-branding-text -->
 
 		<?php if ( ( twentyseventeen_is_frontpage() || ( is_home() && is_front_page() ) ) && ! has_nav_menu( 'top' ) ) : ?>
